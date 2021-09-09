@@ -12,30 +12,6 @@
                 host: "https://wchat.freshchat.com"
             });
             window.fcWidget.open();
-
-
-            window.fcWidget.on("widget:opened", function(resp) {
-              console.log('Widget Opened');
-              //Function to do some task
-               window.flutter_inappwebview.callHandler('fcStatusChange', true).then(function(result) {
-                console.log(result, typeof result);
-                console.log(JSON.stringify(result), result);
-
-            });
-            });
-
-
-            window.fcWidget.on("widget:closed", function(resp) {
-              console.log('Widget Closed');
-              //Function to do some task
-               window.flutter_inappwebview.callHandler('fcStatusChange', false).then(function(result) {
-                console.log(result, typeof result);
-                console.log(JSON.stringify(result), result);
-
-                });
-
-            });
-
         }
         function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshdesk Messaging-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
         initialize(document.body);
