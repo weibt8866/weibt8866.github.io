@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        window.fcWidget.on("widget:opened", function(resp) {
+          console.log('Widget Opened');
+          //Function to <do></do> some task
+            window.flutter_inappbrowser.callHandler('fcStatusChange', true).then(function(result) {
+                console.log(result, typeof result);
+                console.log(JSON.stringify(result), result);
+            });
+        });
+    </script>
+
+    <script>
+        window.fcWidget.on("widget:closed", function(resp) {
+          console.log('Widget Closed');
+           window.flutter_inappbrowser.callHandler('fcStatusChange', false).then(function(result) {
+                console.log(result, typeof result);
+                console.log(JSON.stringify(result), result);
+            });
+          //Function to do some task
+        });
+    </script>
+
+    <script>
         function initFreshChat() {
             window.fcWidget.init({
                 token: "892974cf-9760-4112-9e92-3239f3f9d84a",
