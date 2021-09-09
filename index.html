@@ -17,7 +17,7 @@
             window.fcWidget.on("widget:opened", function(resp) {
               console.log('Widget Opened');
               //Function to do some task
-               window.flutter_inappbrowser.callHandler('fcStatusChange', true).then(function(result) {
+               window.flutter_inappwebview.callHandler('fcStatusChange', true).then(function(result) {
                 console.log(result, typeof result);
                 console.log(JSON.stringify(result), result);
 
@@ -28,7 +28,7 @@
             window.fcWidget.on("widget:closed", function(resp) {
               console.log('Widget Closed');
               //Function to do some task
-               window.flutter_inappbrowser.callHandler('fcStatusChange', false).then(function(result) {
+               window.flutter_inappwebview.callHandler('fcStatusChange', false).then(function(result) {
                 console.log(result, typeof result);
                 console.log(JSON.stringify(result), result);
 
