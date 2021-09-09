@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-
-    </script>
-
-    <script>
-
-    </script>
 
     <script>
         function initFreshChat() {
@@ -19,7 +12,7 @@
                 token: "892974cf-9760-4112-9e92-3239f3f9d84a",
                 host: "https://wchat.freshchat.com"
             });
-            //window.fcWidget.open();
+            window.fcWidget.open();
             window.fcWidget.on("widget:closed", function(resp) {
             console.log('Widget Closed');
             window.flutter_inappbrowser.callHandler('fcStatusChange', false).then(function(result) {
