@@ -1,13 +1,10 @@
 <!DOCTYPE HTML>
 <html> 
-    <head>
-        <base target="Popbazzar" />
-    </head>   
-    <body>
-        <a href="pxwxstudent://app.popbazzar.com">Popbazzar</a>
-        <iframe src="pxwxstudent://app.popbazzar.com"></iframe>
-    </body>
     <script>
         window.location.href= "popbazzar://app.popbazzar.com";
+        a = document.createElement("a");
+        a.setAttribute("href", "popbazzar://app.popbazzar.com"); /***打开app的协议，有an同事提供***/
+        a.style.display = "none";
+        document.body.appendChild(a);
     </script>
 </html>
